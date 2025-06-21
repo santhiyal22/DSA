@@ -14,7 +14,7 @@ public:
                 int diff = f2-f1;
                 if(f1>f2) {
                     del += f2;
-                } else if(diff >= k) {
+                } else if(diff > k) {
               del += (f2-f1-k);
                 }
             }
