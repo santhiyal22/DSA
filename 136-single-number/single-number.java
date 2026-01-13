@@ -1,14 +1,13 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        Map<Integer, Integer> freq = new HashMap<>();
-        int n = nums.length;
-        for(int c:nums) {
-           freq.put(c, freq.getOrDefault(c, 0) + 1);
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for(int num:nums) { 
+          freq.put(num, freq.getOrDefault(num, 0) + 1);  
         }
-        for(int c: nums) {
-            if(freq.get(c)==1) {
-              return c;
-            }
+        for(int num: freq.keySet()) {
+            if(freq.get(num) == 1) {
+                return num;
+            }  
         }
         return -1;
     }
